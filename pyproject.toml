@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "playwright-handson"
+version = "0.1.0"
+description = "Hands-on for Playwright"
+authors = ["aYukiYoshida <yuki.yoshida@access-company.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "playwright_handson"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+teseus = {path = "teseus"}
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
