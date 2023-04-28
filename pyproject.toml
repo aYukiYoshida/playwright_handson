@@ -5,7 +5,7 @@ description = "Hands-on for Playwright"
 authors = ["aYukiYoshida <yuki.yoshida@access-company.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "playwright_handson"}]
+packages = []
 
 [tool.poetry.dependencies]
 python = "^3.10"
