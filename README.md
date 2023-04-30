@@ -1,5 +1,7 @@
 # Playwright Hands-on
 
+This repository manages codes for hands-on of [Playwright](https://playwright.dev).
+
 ## Requirements
 
 - [Python](https://www.python.org/) ^3.10
