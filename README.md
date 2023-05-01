@@ -14,20 +14,12 @@ This repository manages codes for hands-on of [Playwright](https://playwright.de
 
    ```shell
    git clone git@github.com:aYukiYoshida/playwright_handson.git # via SSH
-   git submodule init && git submodule update teseus
    ```
 
 1. Install dependencies
 
    ```shell
-   % poetry install
    % npm install
-   ```
-
-1. (optional) Install pre-commit
-
-   ```shell
-   % poetry run pre-commit install
    ```
 
 ## Usage
