@@ -1,8 +1,7 @@
 {
   "name": "playwright_handson",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Hands-on of Playwright",
-  "main": "index.js",
   "scripts": {
     "prepare": "npm run prepare:poetry && npm run prepare:pre-commit",
     "prepare:poetry": "poetry install",
