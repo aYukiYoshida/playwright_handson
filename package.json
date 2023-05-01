@@ -4,12 +4,9 @@
   "description": "Hands-on of Playwright",
   "main": "index.js",
   "scripts": {
-    "preprepare": "run-s preprepare:*",
-    "preprepare:submodules": "git submodule update --init --recursive",
-    "prepare": "run-s prepare:*",
+    "prepare": "npm run prepare:poetry && npm run prepare:pre-commit",
     "prepare:poetry": "poetry install",
-    "postprepare": "run-s postprepare:*",
-    "postprepare:pre-commit": "poetry run pre-commit install",
+    "prepare:pre-commit": "poetry run pre-commit install",
     "teseus": "poetry run teseus",
     "test": "playwright test",
     "report": "playwright show-report"
