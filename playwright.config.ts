@@ -11,6 +11,8 @@ import { defineConfig, devices } from "@playwright/test";
  */
 export default defineConfig({
   testDir: "./tests",
+  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
+  outputDir: "./results",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -25,13 +27,13 @@ export default defineConfig({
       "allure-playwright",
       {
         detail: true,
-        outputFolder: "test-results",
+        outputFolder: "results",
         suiteTitle: false,
       },
     ],
     // native reporters
     ["line"],
-    ["html", { open: "never", outputFolder: "test-report/native" }],
+    ["html", { open: "never", outputFolder: "./report/native" }],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

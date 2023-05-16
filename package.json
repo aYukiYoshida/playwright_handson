@@ -3,18 +3,16 @@
   "version": "0.1.0",
   "description": "Hands-on of Playwright",
   "scripts": {
-    "postinstall": "serenity-bdd update",
-    "prepare": "npm run prepare:poetry && npm run prepare:pre-commit",
+    "prepare": "failsafe prepare:poetry prepare:pre-commit",
     "prepare:poetry": "poetry install",
     "prepare:pre-commit": "poetry run pre-commit install",
     "teseus": "poetry run teseus",
     "test": "failsafe test:clean test:run test:report:build",
     "test:run": "playwright test",
     "test:report": "failsafe test:report:build test:report:show",
-    "test:report:build": "allure generate --clean test-results -o test-report/allure",
-    "test:report:allure": "allure open test-report/allure",
-    "test:report:native": "playwright show-report test-report/native",
-    "test:clean": "rimraf test-report test-results"
+    "test:report:build": "allure generate --clean results -o report/allure",
+    "test:report:show": "allure open report/allure",
+    "test:clean": "rimraf results report"
   },
   "keywords": [],
   "author": "",
