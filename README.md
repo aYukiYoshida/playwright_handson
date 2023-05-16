@@ -24,12 +24,6 @@ This repository manages codes for hands-on of [Playwright](https://playwright.de
 
 ## Usage
 
-1. Run server in background.
-
-   ```shell
-   npm run teseus &
-   ```
-
 1. Run testing
 
    ```shell
