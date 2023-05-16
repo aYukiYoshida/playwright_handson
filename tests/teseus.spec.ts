@@ -19,8 +19,8 @@ test.describe("Access to TESEUS", () => {
   }) => {
     // actions
     await test.step("ユーザー名とパスワードを入力", async () => {
-      await page.getByTestId("username").fill("pulsar");
-      await page.getByTestId("password").fill("neutronstar");
+      await page.getByRole("textbox", { name: "username" }).fill("pulsar");
+      await page.getByRole("textbox", { name: "password" }).fill("neutronstar");
     });
     await test.step("ログインボタンを押下する", async () => {
       await page.getByRole("button", { name: "Login" }).click();
@@ -36,8 +36,8 @@ test.describe("Access to TESEUS", () => {
   test("登録がないユーザー名でログインする", async ({ page, baseURL }) => {
     // actions
     await test.step("ユーザー名とパスワードを入力", async () => {
-      await page.getByTestId("username").fill("magnetar");
-      await page.getByTestId("password").fill("neutronstar");
+      await page.getByRole("textbox", { name: "username" }).fill("magnetar");
+      await page.getByRole("textbox", { name: "password" }).fill("neutronstar");
     });
     await test.step("ログインボタンを押下する", async () => {
       await page.getByRole("button", { name: "Login" }).click();
@@ -55,8 +55,8 @@ test.describe("Access to TESEUS", () => {
   test("不正なパスワードでログインする", async ({ page, baseURL }) => {
     // actions
     await test.step("ユーザー名とパスワードを入力", async () => {
-      await page.getByTestId("username").fill("pulsar");
-      await page.getByTestId("password").fill("blackhole");
+      await page.getByRole("textbox", { name: "username" }).fill("magnetar");
+      await page.getByRole("textbox", { name: "password" }).fill("blackhole");
     });
     await test.step("ログインボタンを押下する", async () => {
       await page.getByRole("button", { name: "Login" }).click();
