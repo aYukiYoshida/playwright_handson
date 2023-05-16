@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
 
-test.beforeEach(async ({ page }) => {
-  // arranges
-  await page.goto("/");
-});
-
 test.describe("Access to TESEUS", () => {
+  test.beforeEach(async ({ page }) => {
+    // arranges
+    await page.goto("/");
+  });
+
   test("アプリケーションを開く", async ({ page, baseURL }) => {
     // asserts
     await test.step("ログインページに遷移する", async () => {
