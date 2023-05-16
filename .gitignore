@@ -1,8 +1,13 @@
 # Playwright
 /test-results/
+/test-report/
 /playwright-report/
 /playwright/.cache/
-tests/todo-app.spec.ts
+tests.bak
+
+# Allure
+/allure-results/
+/allure-report/
 
 # Logs
 logs

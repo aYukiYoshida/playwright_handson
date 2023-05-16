@@ -7,6 +7,13 @@ This repository manages codes for hands-on of [Playwright](https://playwright.de
 - [Python](https://www.python.org/) ^3.10
 - [Poetry](https://python-poetry.org/)
 - [Node.js](https://nodejs.org)
+- [Java Runtime Environment (JRE)](http://www.oracle.com/technetwork/java/javase/overview/index.html)
+- [Allure Framework](https://docs.qameta.io/allure/)
+
+## Dependencies
+
+- [Playwright](https://playwright.dev)
+- [allure-playwright](https://www.npmjs.com/package/allure-playwright)
 
 ## Setup
 

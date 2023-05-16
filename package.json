@@ -3,22 +3,31 @@
   "version": "0.1.0",
   "description": "Hands-on of Playwright",
   "scripts": {
+    "postinstall": "serenity-bdd update",
     "prepare": "npm run prepare:poetry && npm run prepare:pre-commit",
     "prepare:poetry": "poetry install",
     "prepare:pre-commit": "poetry run pre-commit install",
     "teseus": "poetry run teseus",
-    "test": "playwright test",
-    "report": "playwright show-report"
+    "test": "failsafe test:clean test:run test:report:build",
+    "test:run": "playwright test",
+    "test:report": "failsafe test:report:build test:report:show",
+    "test:report:build": "allure generate --clean test-results -o test-report/allure",
+    "test:report:allure": "allure open test-report/allure",
+    "test:report:native": "playwright show-report test-report/native",
+    "test:clean": "rimraf test-report test-results"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.32.3"
-  },
   "dependencies": {
+    "@playwright/test": "^1.32.3",
+    "allure-playwright": "^2.3.0"
+  },
+  "devDependencies": {
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
-    "prettier": "^2.8.7"
+    "npm-failsafe": "^1.0.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.0"
   }
 }
