@@ -16,15 +16,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@playwright/test": "^1.32.3",
-    "allure-playwright": "^2.3.0"
-  },
+  "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.33.0",
+    "allure-playwright": "^2.3.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "npm-failsafe": "^1.0.0",
+    "playwright": "^1.33.0",
     "prettier": "^2.8.7",
     "rimraf": "^5.0.0"
   }
