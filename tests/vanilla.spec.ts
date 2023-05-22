@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Simple", () => {
+test.describe("Vanilla Playwright Test", () => {
   test.beforeEach(async ({ page }) => {
     // arranges
     await page.goto("/");
@@ -55,7 +55,7 @@ test.describe("Simple", () => {
   test("不正なパスワードでログインする", async ({ page, baseURL }) => {
     // actions
     await test.step("ユーザー名とパスワードを入力", async () => {
-      await page.getByRole("textbox", { name: "username" }).fill("magnetar");
+      await page.getByRole("textbox", { name: "username" }).fill("pulsar");
       await page.getByRole("textbox", { name: "password" }).fill("blackhole");
     });
     await test.step("ログインボタンを押下する", async () => {
