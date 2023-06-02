@@ -28,7 +28,7 @@ export class LoginStatus extends Question<boolean> {
     } catch (e) {
       // do nothing
     }
-    expect(success).toBe(this.checkMode === "toBe");
+    await expect(success).toBe(this.checkMode === "toBe");
     return true;
   }
 
